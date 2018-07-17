@@ -382,7 +382,7 @@ public class MainActivity extends AppCompatActivity {
                 public void run() {
                     notifications();
                 }
-            }, 2000);
+            }, 0);
 
         } else {
 
@@ -460,7 +460,7 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         notifications();
                     }
-                }, 2000);
+                }, 0);
 
             } else if (acceptanceLevel >= ACCEPT_LEVEL && acceptanceLevel <= MIDDLE_ACCEPT_LEVEL) {
                 tv.setText(
@@ -479,7 +479,7 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         notifications();
                     }
-                }, 2000);
+                }, 0);
 
             } else {
                 // Display the information for the matching image.
@@ -506,7 +506,7 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         notifications();
                     }
-                }, 2000);
+                }, 0);
             } // End of prediction.
 
 

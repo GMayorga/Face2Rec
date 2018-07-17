@@ -18,7 +18,6 @@ public class GalleryObserver extends FileObserver {
     @Override
     public void onEvent(int event, String path) {
         if(path != null){
-//            Delay needed because APP runs faster than Glass can send photo to Gallery
             new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -27,7 +26,7 @@ public class GalleryObserver extends FileObserver {
 
 
             }
-        },2000);
+        },0);
 
         }
     }
