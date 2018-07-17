@@ -26,7 +26,7 @@ public class GalleryObserver extends FileObserver {
 
 
             }
-        },0);
+        },2000);
 
         }
     }
