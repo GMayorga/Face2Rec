@@ -233,9 +233,13 @@ public class MainActivity extends AppCompatActivity {
                             detectDisplayAndRecognize(bitmapAutoGallery);
                         }
                     });
-
-
                 }
+            }
+
+            else{
+                imageView.setImageResource(R.drawable.noimage);
+
+
             }
         }
 
