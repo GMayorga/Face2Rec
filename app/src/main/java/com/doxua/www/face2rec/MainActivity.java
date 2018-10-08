@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -92,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
     String info;
     String nothing = " ";
     String moreInfo;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -191,8 +193,25 @@ public class MainActivity extends AppCompatActivity {
                 detectDisplayAndRecognize(bitmapSelectGallery);
             }
         }
+
+        else{
+
+            alertMessage();
+        }
     }
 
+
+
+    public void alertMessage() {
+
+
+
+        new AlertDialog.Builder(this)
+                .setTitle("No images")
+                .setMessage("There are no images in the gallery to display!")
+                .setPositiveButton("OK", null)
+                .show();
+    }
     public static MainActivity getInstance() {
         return instance;
     }
