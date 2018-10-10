@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
     Bitmap bitmapAutoGallery;
     static Bitmap finalBitmapPic;
     GalleryObserver glassDirectoryFileObserver;
-    Bitmap bitmapNoFace;
 
     private static MainActivity instance;
 
@@ -290,11 +289,6 @@ public class MainActivity extends AppCompatActivity {
             //bitmapAutoGallery is for the image that auto loads on app since it is latest image in Gallery
             //Need to resize bitmaps otherwise app will crash and/or not display photo correctly
             finalBitmapPic = Bitmap.createScaledBitmap(bitmapAutoGallery, 500, 800, false);
-        } else {
-
-            finalBitmapPic = Bitmap.createScaledBitmap(bitmapNoFace, 500, 800, false);
-
-
         }
 
 
@@ -393,7 +387,6 @@ public class MainActivity extends AppCompatActivity {
         if (numFaces == 0) {
 
             tv.setText("No Faces Detected");
-            bitmapNoFace = bitmapAutoGallery;
 
             matchText = tv.getText().toString();
 
