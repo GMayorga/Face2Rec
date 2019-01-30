@@ -206,8 +206,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         new AlertDialog.Builder(this)
-                .setTitle("No images")
-                .setMessage("There are no images in the gallery to display!")
+                .setTitle("No image")
+                .setMessage("No gallery image selected!")
                 .setPositiveButton("OK", null)
                 .show();
     }
@@ -402,8 +402,11 @@ public class MainActivity extends AppCompatActivity {
 
         } else {
 
-            recognizeMultiple(this, faces.get(0), greyMat, tv);
+            for(int i = 0; i < numFaces; i++){
 
+                recognizeMultiple(this, faces.get(i), greyMat, tv);
+
+            }
         }
     }
 
@@ -443,6 +446,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Display on the text view what we found.
         prediction = label.get(0);
+
         acceptanceLevel = (int) reliability.get(0);
 
         if (prediction == 0) {

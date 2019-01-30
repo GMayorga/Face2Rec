@@ -45,9 +45,9 @@
         android:id="@+id/result"
         android:layout_width="315dp"
         android:layout_height="170dp"
+        android:layout_alignStart="@+id/predict_faces"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="78dp"
+        android:layout_marginBottom="74dp"
         android:scrollbars="vertical" />
 
 
